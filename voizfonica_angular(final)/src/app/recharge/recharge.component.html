@@ -1,0 +1,20 @@
+<div class="float-container">
+  <h2>PAY HERE</h2>
+  <form #rechargeform="ngForm" (ngSubmit)="paymentdata(rechargeform.value)">
+    <div class="float-child">
+      <h5>Fill Details</h5><br>
+      <input type="number"  placeholder="Customer Id(number)" ngModel name="id"><br>
+      <input type="text"  placeholder=" Enter Name on card" ngModel name="customer_name"><br>
+      <input type="number"  placeholder=" Enter Amount" ngModel name="amount"><br>
+      <input type="number"  placeholder=" Enter card Number" maxlength="15" ngModel name="card_num"><br>
+    </div>
+    <div class="float-child">
+      <input type="number" placeholder=" Enter Expiry Month" ngModel name="exp_month"><br>
+      <input type="number"  placeholder=" Enter Expiry Year" ngModel name="exp_year"><br>
+      <input type="number"  placeholder=" Enter CVV" ngModel name="cvv" ><br>
+      <input type="date"  placeholder=" Enter date"  ngModel name="date"><br><br>
+      <button class="btn btn-primary" type="submit">submit</button>
+    </div>
+  </form>
+</div>
+

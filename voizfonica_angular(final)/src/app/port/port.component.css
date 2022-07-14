@@ -1,0 +1,24 @@
+.float-container {
+    border: 3px solid red;
+    padding: 20px;
+    height: 350px;
+    width: 70%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    background: #dddddd;
+}
+
+.float-child {
+    width: 50%;
+    height: 230px;
+    float: left;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius:5px;
+    text-align:center;
+}
+
+input{
+  width:80%;
+}
