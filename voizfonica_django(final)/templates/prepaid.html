@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prepaid Plan</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Open Sans", sans-serif;
+            color: #333333;
+            text-align: center;
+        }
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 2px solid black;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        tr:nth-child(odd) {
+          background-color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div style="text-align:center;background:white;border-size:auto;font-size: 50px;">
+        <h1>
+          Prepaid Recharge Plans
+        </h1>
+    </div>
+    <table style="width:100%;text-align:left;background-color:aqua;border:solid red;">
+        <tr style="border:solid black;">
+            <th>Plan Id</th>
+            <th>Plan Name</th>
+            <th>Benefits</th>
+            <th>Validity</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in records %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.plan_name}}</td>
+                <td>{{i.benefits}}</td>
+                <td>{{i.validity}}</td>
+                <td>{{i.amount}}</td>
+                <td> <a href="/update_prepaid/{{ i.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>&nbsp;&nbsp;
+                     <a href="/delete_prepaid/{{ i.id }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table><br><br>
+
+    <a style="background-color: gray;color:#fff;border: solid black; padding:15px; border-radius:25px;box-size:auto;"
+       href="/new_prepaid"><span class="glyphicon glyphicon-pencil" >Add New Plan</span></a><br><br><br><br>
+    <a style="background-color: gray;color:#fff;border: solid black; padding:15px; border-radius:25px;box-size:auto;"
+           href="http://127.0.0.1:8000/Admin">Admin HomePage</a>
+    <br><br><br><br>
+    <a style="background-color: gray;color:#fff;border: solid black; padding:15px; border-radius:25px;box-size:auto;"
+           href="/logout">Logout</a>
+
+</body>
+</html>
