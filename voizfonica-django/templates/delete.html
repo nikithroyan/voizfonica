@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+    body{
+        background-image: url(/static/images/sh1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: "Open Sans", sans-serif;
+        color: #333333;
+        text-align: center;
+        color: #fff
+    }
+
+</style>
+</head>
+<body>
+    <form method="POST" action="">
+        <!-- Security token -->
+        {% csrf_token %}
+            <h1 style="font-size:40px;">Are You Sure Want to Delete??</h1><br>
+            <input class="btn btn-danger" type="submit" value="YES"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" class="btn btn-primary" onclick="history.go(-1)" value="CANCEL">
+    </form>
+</body>
+</html>

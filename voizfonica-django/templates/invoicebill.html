@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Bill</title></head>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+        }
+        td,th{
+            padding-left: 90px;
+        }
+        .table{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header {
+          overflow: hidden;
+          background-color: black;
+          height: 90px;
+          width: 95%;
+          padding-top:10px;
+          padding-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 20px;
+
+        }
+
+        .header-right{
+            float: right;
+            color: #fff;
+            padding-right: 10px;
+        }
+        .header-left{
+            float: left;
+            color: #fff;
+            padding-left: 10px;
+        }
+
+
+    </style>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h2>VOIZFONICA</h2>
+        </div>
+        <div class="header-right">
+            <h2>The Right Choice</h2>
+        </div>
+        <h1>Monthly Invoice</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Name :</th>
+            <td>{{obj.customer_name}}</td>
+        </tr>
+        <tr>
+            <th>Mobile :</th>
+            <td>{{obj.mobile}}</td>
+        </tr>
+        <tr>
+            <th>Connection :</th>
+            <td>{{obj.connection_type}}</td>
+        </tr>
+        <tr>
+            <th>Email :</th>
+            <td>{{obj.email}}</td>
+        </tr>
+        <tr>
+            <th>Address :</th>
+            <td>{{obj.address}}</td>
+        </tr>
+    </table>
+    <br><br><br>
+    <table class="table">
+        <tr>
+            <th scope="col">Previous Amount</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Due Amount</th>
+            <th scope="col">Payment Date</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td>Rs. {{plan.amount}}</td>
+            <td>Rs. {{plan.amount}}</td>
+            <td> Rs. 0.00</td>
+            <td>{{ plan.date }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <p style="text-align:center;"><b>This is an electronically generated statement and does not require any signature.</b></p>
+</body>
+</html>
