@@ -1,0 +1,50 @@
+<body>
+  <div class="navbar">
+      <a  class="left" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>Home</a>
+      <a routerLink="/prepaid-plan" routerLinkActive="active">Prepaid</a>
+      <a routerLink="/postpaid-plan" routerLinkActive="active">Postpaid</a>
+      <a routerLink="/dongle-plan" routerLinkActive="active">Dongle</a>
+      <a href="http://127.0.0.1:8000/username1">Invoice</a>
+      <a href="http://127.0.0.1:8000/" class="right">Logout</a><br><br>
+  </div>
+  <router-outlet></router-outlet>
+
+   <div class="header">
+      <h1><b>WELCOME TO THE RIGHT CHOICE!</b></h1>
+      <h1><b>VoizFonica!</b></h1>
+  </div>
+
+
+  <router-outlet></router-outlet>
+
+  <div class="row">
+      <div class="side">
+          <h2>Voizfonica</h2>
+
+          <p>We are here to be your telecom provider today, tomorrow, and beyond... </p><br><br>
+          <h2 style="background:#654321"> BUY NEW CONNECTION</h2>
+          <h4>Home Deliver Your Simcard </h4>
+          <img src="assets/images/img.png" alt="image" height="160px" width="300px"><br><br>
+          <a style="padding:10px;font-weight:bold;" href="/buy" class="btn btn-primary" role="button">Buy Now</a>
+      </div>
+      <div class="main">
+          <h2>We are here to help you..</h2>
+          <img src="assets/images/img_2.png" alt="image" height="160px" width="300px"><br><br>
+
+          <a style="padding:10px;font-weight:bold;" href="/query" class="btn btn-primary" role="button">Customer Support</a>
+          <br><br><br>
+
+          <h2>Port to Voizfonica</h2>
+          <a style="padding:10px;font-weight:bold;" href="/port" class="btn btn-primary" role="button">Click Here</a>
+      </div>
+  </div>
+
+  <footer>
+    <h3>Follow us on: </h3>
+       <p> Instagram: @Voizfonica_telecom &nbsp;&nbsp;&nbsp;
+        Facebook: Voizfonica_telecom &nbsp;&nbsp;&nbsp;
+        Twitter: @Voizfonica_telecom
+    </p>
+
+  </footer>
+</body>
